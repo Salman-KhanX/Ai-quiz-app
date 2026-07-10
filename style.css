@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+}
+
+.quiz-box{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    animation:fadeIn .6s ease;
+}
+
+.quiz-box h1{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+.progress{
+    text-align:right;
+    color:#555;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+#question{
+    color:#222;
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+.btn-container{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn{
+    background:#f4f4f4;
+    border:2px solid #ddd;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    text-align:left;
+    font-size:17px;
+    transition:.3s;
+}
+
+.btn:hover:not([disabled]){
+    background:#2563eb;
+    color:#fff;
+    transform:translateX(5px);
+}
+
+.btn:disabled{
+    cursor:no-drop;
+}
+
+.correct{
+    background:#22c55e !important;
+    color:#fff;
+    border:none;
+}
+
+.wrong{
+    background:#ef4444 !important;
+    color:#fff;
+    border:none;
+}
+
+#next-btn{
+    display:none;
+    margin:30px auto 0;
+    padding:14px 35px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#next-btn:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .quiz-box{
+        padding:25px;
+    }
+
+    .quiz-box h1{
+        font-size:26px;
+    }
+
+    #question{
+        font-size:20px;
+    }
+
+    .btn{
+        font-size:16px;
+    }
+
+}
